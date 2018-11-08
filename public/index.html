@@ -2,19 +2,21 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="keywords" content="临时邮箱,forsaken mail,disposable mail">
-  <title>Forsaken Mail</title>
-  <link href="https://lib.baomitu.com/semantic-ui/2.1.7/semantic.min.css" rel="stylesheet">
+  <meta name="keywords" content="临时邮箱,forsaken mail,disposable mail,免费教育邮箱,free mail,free edu mail,免费Office365 5T网盘空间,Office365 E3 MSDN">
+  <title>临时邮箱</title>
+  <link rel="stylesheet" href="//lib.baomitu.com/semantic-ui/2.1.7/semantic.min.css">
   <link rel="stylesheet" href="/css/app.css">
   <link rel="stylesheet" href="/css/prism.css">
 </head>
 <body>
 <div class="ui fixed borderless menu">
   <div class="ui text container" style="max-width: 100% !important;">
+  <a href="/" target="_blank" >
     <div href="#" class="header item">
       <img class="logo" src="//semantic-ui.com/examples/assets/images/logo.png" alt="logo">
-      Forsaken Mail
+      临时邮箱
     </div>
+	</a>
     <div class="ui label item right floated mailaddress" style="width: 35%;">
       <button class="ui icon button">
         <i class="mail icon copyable"></i>
@@ -26,6 +28,17 @@
       <i id="customShortid" style="margin-left:0.5em" class="circular edit link icon"></i>
     </div>
   </div>
+</div>
+<div class="ui mains container">
+	<div class="ui icon message">
+		<i class="notched circle loading icon"></i>
+		<div class="content">
+			<div class="header">
+				服务正常运行中
+			</div>
+			<p>服务运行正常,请耐心等待系统处理您的来信!</p>
+		</div>
+	</div>
 </div>
 <div class="ui main container">
   <div class="ui grid">
@@ -59,6 +72,24 @@
     </div>
   </div>
 </div>
+<div class="ui hidden divider"></div>
+<div class="ui container">
+<div class="ui piled segment">
+  <h4 class="ui header">使用规则</h4>
+  <p>0.本服务仅提供临时邮箱接收邮件的功能.</p>
+  <p>1.本服务不保证在线率,稳定性和其他技术性和非技术性问题.</p>
+  <p>2.本服务不提供任何支持,使用时造成的直接损失或间接损失不负任何责任.</p>
+  <!-- <p>3.本服务使用谷歌云免费服务器，服务器流量不多，暂不提供使用自己的域名服务.</p> -->
+  <p>3.如需使用自己的域名,直接创建域名A记录到 本站服务器  等待生效即可.</p>
+</div>
+</div>
+<div class="ui container">
+	<div class="ui message">
+		<div class="header">
+			本服务由 无码大爷 维护和运行
+		</div>
+	</div>
+</div>
 <div class="ui modal" id="raw">
   <div class="header">
   </div>
@@ -66,10 +97,19 @@
   </div>
 </div>
 </body>
-<script src="https://lib.baomitu.com/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://lib.baomitu.com/semantic-ui/2.1.7/semantic.min.js"></script>
-<script src="https://lib.baomitu.com/socket.io/1.3.7/socket.io.min.js"></script>
-<script src="https://lib.baomitu.com/clipboard.js/1.5.5/clipboard.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/semantic-ui/2.1.7/semantic.min.js"></script>
+<script src="//cdn.bootcss.com/socket.io/1.3.7/socket.io.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.5/clipboard.min.js"></script>
 <script src="/js/app.js"></script>
 <script src="/js/prism.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?474199023f939a97185df04a61998a94";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </html>
