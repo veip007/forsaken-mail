@@ -1,33 +1,71 @@
-Forsaken-Mail
+# Forsaken-Mail
 ==============
-A self-hosted disposable mail service.
 
-[Online Demo](http://disposable.dhc-app.com)
+#### 1、docker一键安装脚本
+``` bash
+wget -qO- get.docker.com | sh  #官方安装
+curl -sSL https://get.daocloud.io/docker | sh  #国内daodocker安装,推荐
+``` 
 
-### Installation
+#### 2、容器安装邮箱
+``` bash
+docker run --restart=always --name forsaken-mail -d -p 25:25 -p 80:3000 veip007/forsaken-mail
+``` 
+此为80单端口（已设置开机启动容器）
 
-#### Setting up your DNS correctly
+``` bash
+docker run --restart=always --name forsaken-mail -d -p 25:25 -p 80:3000 -p 1234:3000 -p 3000:3000 -p 8080:3000 veip007/forsaken-mail
+``` bash
+#多端口（80,1234 3000,8080，已设置开机启动容器）
 
-In order to receive emails, your smtp server address should be made available somewhere. Two records should be added to your DNS records. Let us pretend that we want to receive emails at ```*@subdomain.domain.com```:
-* First an MX record: ```subdomain.domain.com MX 10 mxsubdomain.domain.com```. This means that the mail server for addresses like ```*@subdomain.domain.com``` will be ```mxsubdomain.domain.com```.
-* Then an A record: ```mxsubdomain.domain.com A the.ip.address.of.your.mailin.server```. This tells at which ip address the mail server can be found.
-
-You can fire up Mailin (see next section) and use an [smtp server tester](http://mxtoolbox.com/diagnostic.aspx) to verify that everything is correct.
-
-#### Let's Go
-general way:
-```
-npm install && npm start
-```
-if you want to run this inside a docker container
-```
-docker build -t veip007/forsaken-mail .
-docker run --name forsaken-mail -d -p 25:25 -p 3000:3000 veip007/forsaken-mail
-```
-Open your browser and type in
-```
+#### 3、打开浏览器并输入
+``` bash
 http://localhost:3000
 ```
 
-Enjoy!
+#### 4、卸载docker
+``` bash
+apt-get remove docker-ce
+```
 
+### docker常用命令
+
+#### 关闭容器
+``` bash
+docker stop forsaken-mail
+```
+
+#### 删除容器
+``` bash
+docker rm forsaken-mail
+```
+
+#### 删除镜像
+``` bash
+docker rmi veip007/forsaken-mail
+```
+
+#### 列出镜像
+``` bash
+docker images
+```
+
+#### 删除镜像
+``` bash
+docker rmi  <IMAGE ID>
+```
+
+#### 列出容器
+``` bash
+docker ps -a
+```
+
+#### 删除容器
+``` bash
+docker rm  <CONTAINER ID>
+```
+
+#### 停止和删除所有Docker容器
+``` bash
+docker stop $(docker ps -a -q) & docker rm $(docker ps -a -q)
+```
