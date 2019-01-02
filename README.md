@@ -15,7 +15,7 @@ docker run --restart=always --name forsaken-mail -d -p 25:25 -p 80:3000 veip007/
 
 ``` bash
 docker run --restart=always --name forsaken-mail -d -p 25:25 -p 80:3000 -p 1234:3000 -p 3000:3000 -p 8080:3000 veip007/forsaken-mail
-``` bash
+```
 #多端口（80,1234 3000,8080，已设置开机启动容器）
 
 #### 3、打开浏览器并输入
