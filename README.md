@@ -145,3 +145,10 @@ docker stop $(docker ps -a -q) & docker rm $(docker ps -a -q)
 关闭docker   ```service docker stop```   
 
 关闭docker  ```systemctl stop docker```
+
+#### Docker常用命令
+docker restart xxx       #重启xxx容器
+docker stop xxx          #停止xxx容器
+docker start xxx         #启动xxx容器
+docker rm -v xxx         #删除xxx容器
+
