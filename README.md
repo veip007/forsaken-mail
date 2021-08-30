@@ -13,6 +13,11 @@ docker run --restart=always --name forsaken-mail -d -p 25:25 -p 3000:3000 veip00
 ``` 
 此为3000单端口（已设置开机启动容器）  不懂的话请默认此命令安装
 
+若VPS为ARM架构则使用
+``` bash
+docker run --restart=always --name forsaken-mail -d -p 25:25 -p 3000:3000 veip007/forsaken-mail:arm
+``` 
+
 ``` bash
 docker run --restart=always --name forsaken-mail -d -p 25:25 -p 80:3000 -p 1234:3000 -p 3000:3000 -p 8080:3000 veip007/forsaken-mail
 ```
