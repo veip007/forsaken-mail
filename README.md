@@ -5,6 +5,8 @@
 ``` bash
 wget -qO- get.docker.com | sh  #官方安装
 curl -sSL https://get.daocloud.io/docker | sh  #国内daodocker安装,推荐
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun     #阿里云镜像
+curl -fsSL https://get.docker.com | bash -s docker --mirror AzureChinaCloud    #腾讯镜像
 ``` 
 
 #### 2、容器安装邮箱
