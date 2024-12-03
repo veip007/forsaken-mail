@@ -162,3 +162,12 @@ docker stop $(docker ps -a -q) & docker rm $(docker ps -a -q)
 
 ```docker rm -v xxx  ```       #删除xxx容器
 
+```docker system prune```      #删除未使用的镜像、容器、网络和数据卷
+
+```docker image prune -a```      #删除所有未使用的镜像
+
+```docker container prune```      #删除所有停止的容器
+
+```docker network prune```      #删除所有未使用的网络
+
+```docker volume prune```      #删除所有未使用的数据卷
